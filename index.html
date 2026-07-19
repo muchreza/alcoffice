@@ -1,0 +1,1854 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kantor Hukum ALC — Aldo Chanigia & Partners | Solusi Hukum Terpercaya</title>
+    <meta name="description" content="Kantor Hukum ALC Aldo Chanigia & Partners — solusi hukum terpercaya di Bandar Lampung. Layanan hukum pidana, perdata, keluarga, bisnis, agraria, dan mediasi.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* ============================================
+           CSS VARIABLES & RESET
+           ============================================ */
+        :root {
+            --navy: #0a1628;
+            --navy-light: #122240;
+            --navy-mid: #1a2d4a;
+            --gold: #c9a84c;
+            --gold-light: #d4b96a;
+            --gold-dark: #b8963a;
+            --white: #ffffff;
+            --off-white: #f5f5f5;
+            --light-gray: #eaeaea;
+            --mid-gray: #8899aa;
+            --text-dark: #1a1a2e;
+            --text-body: #3a3a4a;
+            --text-light: #6a7a8a;
+            --font-heading: 'Playfair Display', Georgia, 'Times New Roman', serif;
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            --section-padding: 100px 0;
+            --container-max: 1200px;
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            font-family: var(--font-body);
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--text-body);
+            background-color: var(--white);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            line-height: 1.2;
+            color: var(--text-dark);
+        }
+
+        .container {
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Section headings */
+        .section-label {
+            font-family: var(--font-body);
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .section-title {
+            font-size: clamp(1.8rem, 4vw, 2.6rem);
+            color: var(--text-dark);
+            margin-bottom: 16px;
+        }
+
+        .section-subtitle {
+            font-size: 1.05rem;
+            color: var(--text-light);
+            max-width: 600px;
+            line-height: 1.8;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+
+        .section-header .section-subtitle {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Gold underline accent */
+        .gold-line {
+            width: 48px;
+            height: 2px;
+            background: var(--gold);
+            margin: 20px auto 0;
+        }
+
+        /* Animation classes */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(32px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ============================================
+           NAVIGATION
+           ============================================ */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 20px 0;
+            transition: background-color 0.4s ease, padding 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .navbar.scrolled {
+            background-color: rgba(10, 22, 40, 0.97);
+            padding: 12px 0;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .navbar .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .nav-logo-icon {
+            width: 40px;
+            height: 40px;
+            border: 2px solid var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-heading);
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--gold);
+            letter-spacing: 1px;
+        }
+
+        .nav-logo-text {
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--white);
+            letter-spacing: 0.5px;
+        }
+
+        .nav-logo-text span {
+            display: block;
+            font-family: var(--font-body);
+            font-size: 0.6rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold-light);
+            margin-top: 1px;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 36px;
+        }
+
+        .nav-menu a {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.8);
+            letter-spacing: 0.5px;
+            position: relative;
+            padding: 4px 0;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 1.5px;
+            background: var(--gold);
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: var(--white);
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 22px;
+            background: var(--gold);
+            color: var(--navy) !important;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .nav-cta:hover {
+            background: var(--gold-light);
+            transform: translateY(-1px);
+        }
+
+        .nav-cta svg {
+            width: 14px;
+            height: 14px;
+        }
+
+        /* Hamburger */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 4px;
+            background: none;
+            border: none;
+        }
+
+        .hamburger span {
+            width: 24px;
+            height: 2px;
+            background: var(--white);
+            transition: var(--transition);
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        /* Mobile menu */
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(10, 22, 40, 0.98);
+            z-index: 999;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 28px;
+        }
+
+        .mobile-menu.open {
+            display: flex;
+        }
+
+        .mobile-menu a {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            color: var(--white);
+            letter-spacing: 1px;
+            opacity: 0.9;
+        }
+
+        .mobile-menu a:hover {
+            color: var(--gold);
+        }
+
+        .mobile-close {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .mobile-close svg {
+            width: 24px;
+            height: 24px;
+            stroke: var(--white);
+        }
+
+        /* ============================================
+           HERO SECTION
+           ============================================ */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background-color: var(--navy);
+            overflow: hidden;
+        }
+
+        /* Elegant pattern background */
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                repeating-linear-gradient(
+                    45deg,
+                    transparent,
+                    transparent 40px,
+                    rgba(201, 168, 76, 0.03) 40px,
+                    rgba(201, 168, 76, 0.03) 41px
+                ),
+                repeating-linear-gradient(
+                    -45deg,
+                    transparent,
+                    transparent 40px,
+                    rgba(201, 168, 76, 0.03) 40px,
+                    rgba(201, 168, 76, 0.03) 41px
+                );
+            z-index: 1;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 30% 50%, rgba(201, 168, 76, 0.06) 0%, transparent 60%),
+                        radial-gradient(ellipse at 70% 80%, rgba(201, 168, 76, 0.04) 0%, transparent 50%);
+            z-index: 1;
+        }
+
+        /* Scale pattern texture */
+        .hero-pattern {
+            position: absolute;
+            inset: 0;
+            background-image:
+                radial-gradient(circle at 1px 1px, rgba(255,255,255,0.015) 1px, transparent 1px);
+            background-size: 48px 48px;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 720px;
+            padding: 120px 0 80px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 18px;
+            border: 1px solid rgba(201, 168, 76, 0.4);
+            background: rgba(201, 168, 76, 0.08);
+            color: var(--gold-light);
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            margin-bottom: 28px;
+        }
+
+        .hero-title {
+            font-size: clamp(2.2rem, 5.5vw, 3.6rem);
+            font-weight: 700;
+            color: var(--white);
+            line-height: 1.15;
+            margin-bottom: 8px;
+        }
+
+        .hero-title .gold {
+            color: var(--gold);
+        }
+
+        .hero-title-sub {
+            font-family: var(--font-body);
+            font-size: clamp(0.85rem, 2vw, 1rem);
+            font-weight: 400;
+            color: var(--mid-gray);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 28px;
+        }
+
+        .hero-desc {
+            font-size: 1.05rem;
+            color: rgba(255, 255, 255, 0.65);
+            line-height: 1.85;
+            max-width: 560px;
+            margin-bottom: 40px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 32px;
+            background: var(--gold);
+            color: var(--navy);
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            border: 2px solid var(--gold);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn-primary:hover {
+            background: var(--gold-light);
+            border-color: var(--gold-light);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(201, 168, 76, 0.25);
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 32px;
+            background: transparent;
+            color: var(--white);
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            border: 1.5px solid rgba(255, 255, 255, 0.25);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+            transform: translateY(-2px);
+        }
+
+        /* Hero decorative element */
+        .hero-decor {
+            position: absolute;
+            right: -60px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 400px;
+            height: 400px;
+            border: 1px solid rgba(201, 168, 76, 0.1);
+            z-index: 1;
+        }
+
+        .hero-decor::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 1px solid rgba(201, 168, 76, 0.07);
+        }
+
+        /* ============================================
+           ABOUT SECTION
+           ============================================ */
+        .about {
+            padding: var(--section-padding);
+            background: var(--white);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center;
+        }
+
+        .about-image-area {
+            position: relative;
+        }
+
+        .about-image-placeholder {
+            width: 100%;
+            aspect-ratio: 4/5;
+            background: var(--navy);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-image-placeholder::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 20px,
+                    rgba(201, 168, 76, 0.04) 20px,
+                    rgba(201, 168, 76, 0.04) 21px
+                ),
+                repeating-linear-gradient(
+                    90deg,
+                    transparent,
+                    transparent 20px,
+                    rgba(201, 168, 76, 0.04) 20px,
+                    rgba(201, 168, 76, 0.04) 21px
+                );
+        }
+
+        .about-image-placeholder .initials {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: var(--font-heading);
+            font-size: 4rem;
+            font-weight: 700;
+            color: rgba(201, 168, 76, 0.15);
+            letter-spacing: 8px;
+        }
+
+        .about-image-frame {
+            position: absolute;
+            top: -16px;
+            left: -16px;
+            right: 16px;
+            bottom: 16px;
+            border: 1.5px solid var(--gold);
+            z-index: -1;
+        }
+
+        .about-text h3 {
+            font-size: 1.5rem;
+            margin-bottom: 6px;
+        }
+
+        .about-text .role {
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--gold-dark);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+
+        .about-text p {
+            margin-bottom: 16px;
+            line-height: 1.85;
+            color: var(--text-body);
+        }
+
+        .about-stats {
+            display: flex;
+            gap: 40px;
+            margin-top: 32px;
+            padding-top: 32px;
+            border-top: 1px solid var(--light-gray);
+        }
+
+        .about-stat-number {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--gold);
+            line-height: 1;
+        }
+
+        .about-stat-label {
+            font-size: 0.75rem;
+            color: var(--text-light);
+            margin-top: 4px;
+            letter-spacing: 0.5px;
+        }
+
+        /* ============================================
+           SERVICES SECTION
+           ============================================ */
+        .services {
+            padding: var(--section-padding);
+            background: var(--off-white);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 40px 32px;
+            border: 1px solid var(--light-gray);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: width 0.4s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(10, 22, 40, 0.08);
+            border-color: transparent;
+        }
+
+        .service-card:hover::before {
+            width: 100%;
+        }
+
+        .service-icon {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--navy);
+            margin-bottom: 24px;
+        }
+
+        .service-icon svg {
+            width: 22px;
+            height: 22px;
+            stroke: var(--gold);
+        }
+
+        .service-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 6px;
+            color: var(--text-dark);
+        }
+
+        .service-card .service-en {
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: var(--gold-dark);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        .service-card p {
+            font-size: 0.9rem;
+            line-height: 1.75;
+            color: var(--text-light);
+        }
+
+        /* ============================================
+           WHY CHOOSE US
+           ============================================ */
+        .why {
+            padding: var(--section-padding);
+            background: var(--navy);
+            color: var(--white);
+        }
+
+        .why .section-title {
+            color: var(--white);
+        }
+
+        .why .section-subtitle {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+        }
+
+        .why-item {
+            text-align: center;
+            padding: 36px 20px;
+            border: 1px solid rgba(201, 168, 76, 0.12);
+            transition: var(--transition);
+        }
+
+        .why-item:hover {
+            border-color: rgba(201, 168, 76, 0.3);
+            background: rgba(201, 168, 76, 0.04);
+        }
+
+        .why-icon {
+            width: 56px;
+            height: 56px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1.5px solid var(--gold);
+            position: relative;
+        }
+
+        .why-icon svg {
+            width: 24px;
+            height: 24px;
+            stroke: var(--gold);
+        }
+
+        .why-item h3 {
+            font-size: 1.05rem;
+            color: var(--white);
+            margin-bottom: 8px;
+        }
+
+        .why-item p {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.5);
+            line-height: 1.75;
+        }
+
+        /* ============================================
+           TESTIMONIALS / TRUST
+           ============================================ */
+        .trust {
+            padding: 80px 0;
+            background: var(--white);
+        }
+
+        .trust-card {
+            max-width: 640px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 48px;
+            border: 1px solid var(--light-gray);
+            position: relative;
+        }
+
+        .trust-stars {
+            display: flex;
+            justify-content: center;
+            gap: 4px;
+            margin-bottom: 24px;
+        }
+
+        .trust-stars svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--gold);
+        }
+
+        .trust-score {
+            font-family: var(--font-heading);
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+
+        .trust-label {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-bottom: 24px;
+        }
+
+        .trust-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--gold-dark);
+            letter-spacing: 0.5px;
+        }
+
+        .trust-link:hover {
+            color: var(--gold);
+        }
+
+        .trust-link svg {
+            width: 14px;
+            height: 14px;
+            stroke: currentColor;
+        }
+
+        .trust-quote {
+            font-family: var(--font-heading);
+            font-size: 1.15rem;
+            font-style: italic;
+            color: var(--text-body);
+            line-height: 1.8;
+            margin-top: 32px;
+            padding-top: 32px;
+            border-top: 1px solid var(--light-gray);
+        }
+
+        /* ============================================
+           CONTACT SECTION
+           ============================================ */
+        .contact {
+            padding: var(--section-padding);
+            background: var(--off-white);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+        }
+
+        .contact-form-area h3 {
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+        }
+
+        .contact-form-area > p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 32px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid var(--light-gray);
+            background: var(--white);
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            transition: var(--transition);
+            outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: var(--gold);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .form-submit {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 36px;
+            background: var(--navy);
+            color: var(--white);
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            border: 2px solid var(--navy);
+            cursor: pointer;
+            transition: var(--transition);
+            margin-top: 8px;
+        }
+
+        .form-submit:hover {
+            background: var(--gold);
+            border-color: var(--gold);
+            color: var(--navy);
+        }
+
+        .contact-info-area h3 {
+            font-size: 1.3rem;
+            margin-bottom: 24px;
+        }
+
+        .contact-detail {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .contact-detail-icon {
+            width: 40px;
+            height: 40px;
+            min-width: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--navy);
+        }
+
+        .contact-detail-icon svg {
+            width: 16px;
+            height: 16px;
+            stroke: var(--gold);
+        }
+
+        .contact-detail-text strong {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 2px;
+        }
+
+        .contact-detail-text span,
+        .contact-detail-text a {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .contact-detail-text a:hover {
+            color: var(--gold-dark);
+        }
+
+        .contact-map {
+            margin-top: 32px;
+            width: 100%;
+            height: 240px;
+            border: 1px solid var(--light-gray);
+        }
+
+        .contact-map iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* ============================================
+           FOOTER
+           ============================================ */
+        .footer {
+            background: var(--navy);
+            color: var(--white);
+            padding: 64px 0 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 48px;
+            padding-bottom: 48px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .footer-brand .nav-logo {
+            margin-bottom: 16px;
+        }
+
+        .footer-brand p {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.45);
+            line-height: 1.8;
+            max-width: 320px;
+            margin-bottom: 24px;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 12px;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            transition: var(--transition);
+        }
+
+        .footer-social a:hover {
+            border-color: var(--gold);
+            background: rgba(201, 168, 76, 0.1);
+        }
+
+        .footer-social svg {
+            width: 16px;
+            height: 16px;
+            fill: rgba(255, 255, 255, 0.6);
+        }
+
+        .footer-social a:hover svg {
+            fill: var(--gold);
+        }
+
+        .footer-col h4 {
+            font-family: var(--font-body);
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul li a {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            padding: 24px 0;
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        /* ============================================
+           FLOATING WHATSAPP BUTTON
+           ============================================ */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            width: 56px;
+            height: 56px;
+            background: #25D366;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 900;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.35);
+            transition: var(--transition);
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.08);
+            box-shadow: 0 6px 28px rgba(37, 211, 102, 0.45);
+        }
+
+        .whatsapp-float svg {
+            width: 26px;
+            height: 26px;
+            fill: var(--white);
+        }
+
+        /* ============================================
+           RESPONSIVE
+           ============================================ */
+        @media (max-width: 1024px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .why-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-grid {
+                gap: 40px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-brand {
+                grid-column: 1 / -1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            :root {
+                --section-padding: 72px 0;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hero-content {
+                padding: 140px 0 60px;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+            }
+
+            .hero-actions a {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .hero-decor {
+                display: none;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .about-image-area {
+                max-width: 360px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .why-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 36px;
+            }
+
+            .footer-brand {
+                grid-column: auto;
+            }
+
+            .section-header {
+                margin-bottom: 40px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 1.8rem;
+            }
+
+            .about-stats {
+                gap: 24px;
+            }
+
+            .about-stat-number {
+                font-size: 1.6rem;
+            }
+
+            .trust-card {
+                padding: 32px 24px;
+            }
+
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+            }
+
+            .whatsapp-float svg {
+                width: 22px;
+                height: 22px;
+            }
+        }
+
+        /* ============================================
+           PRINT STYLES
+           ============================================ */
+        @media print {
+            .navbar, .whatsapp-float, .mobile-menu, .hamburger {
+                display: none !important;
+            }
+
+            .hero {
+                min-height: auto;
+                padding: 40px 0;
+                background: var(--navy) !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            body {
+                font-size: 11pt;
+            }
+
+            .section-title {
+                font-size: 18pt;
+            }
+
+            .service-card, .why-item, .contact-detail {
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ==========================================
+         NAVIGATION
+         ========================================== -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#beranda" class="nav-logo">
+                <div class="nav-logo-icon">ALC</div>
+                <div class="nav-logo-text">
+                    ALC Law Office
+                    <span>Aldo Chanigia & Partners</span>
+                </div>
+            </a>
+            <div class="nav-menu">
+                <a href="#beranda">Beranda</a>
+                <a href="#tentang">Tentang Kami</a>
+                <a href="#layanan">Layanan</a>
+                <a href="#kontak">Kontak</a>
+                <a href="https://wa.me/6287883032862" target="_blank" rel="noopener" class="nav-cta">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                    Konsultasi
+                </a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-close" id="mobileClose" aria-label="Tutup menu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+        <a href="#beranda" class="mobile-link">Beranda</a>
+        <a href="#tentang" class="mobile-link">Tentang Kami</a>
+        <a href="#layanan" class="mobile-link">Layanan</a>
+        <a href="#kontak" class="mobile-link">Kontak</a>
+        <a href="https://wa.me/6287883032862" target="_blank" rel="noopener" class="btn-primary" style="margin-top: 16px;">Konsultasi Gratis</a>
+    </div>
+
+    <!-- ==========================================
+         HERO SECTION
+         ========================================== -->
+    <section class="hero" id="beranda">
+        <div class="hero-pattern"></div>
+        <div class="hero-decor"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    Terpercaya & Profesional
+                </div>
+                <h1 class="hero-title">
+                    Kantor Hukum <span class="gold">ALC</span><br>
+                    Aldo Chanigia & Partners
+                </h1>
+                <p class="hero-title-sub">Solusi Hukum Terpercaya di Bandar Lampung</p>
+                <p class="hero-desc">
+                    Kami memberikan layanan hukum yang komprehensif dan profesional untuk melindungi hak serta kepentingan hukum Anda. Kepuasan klien adalah prioritas utama kami.
+                </p>
+                <div class="hero-actions">
+                    <a href="https://wa.me/6287883032862?text=Halo%2C%20saya%20ingin%20konsultasi%20hukum" target="_blank" rel="noopener" class="btn-primary">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                        Konsultasi Gratis
+                    </a>
+                    <a href="#layanan" class="btn-secondary">
+                        Lihat Layanan
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         TENTANG KAMI (ABOUT)
+         ========================================== -->
+    <section class="about" id="tentang">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image-area fade-up">
+                    <div class="about-image-placeholder">
+                        <span class="initials">AC</span>
+                    </div>
+                    <div class="about-image-frame"></div>
+                </div>
+                <div class="about-text fade-up">
+                    <span class="section-label">Tentang Kami</span>
+                    <h3>Adv. Aldo Chanigia, S.H.</h3>
+                    <p class="role">Pendiri & Managing Partner</p>
+                    <p>
+                        Kantor Hukum ALC Aldo Chanigia & Partners didirikan dengan komitmen untuk memberikan layanan hukum terbaik bagi masyarakat di wilayah Bandar Lampung dan sekitarnya. Dipimpin oleh Adv. Aldo Chanigia, S.H., kami hadir sebagai mitra hukum yang dapat diandalkan dalam menyelesaikan berbagai permasalahan hukum.
+                    </p>
+                    <p>
+                        Dengan pendekatan yang profesional, transparan, dan berorientasi pada kepentingan klien, kami memastikan setiap kasus mendapat perhatian dan penanganan yang terbaik. Kepercayaan Anda adalah fondasi dari praktik hukum kami.
+                    </p>
+                    <div class="about-stats">
+                        <div>
+                            <div class="about-stat-number">5.0</div>
+                            <div class="about-stat-label">Rating Google Maps</div>
+                        </div>
+                        <div>
+                            <div class="about-stat-number">100%</div>
+                            <div class="about-stat-label">Komitmen pada Klien</div>
+                        </div>
+                        <div>
+                            <div class="about-stat-number">24/7</div>
+                            <div class="about-stat-label">Siap Melayani</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         LAYANAN (SERVICES)
+         ========================================== -->
+    <section class="services" id="layanan">
+        <div class="container">
+            <div class="section-header fade-up">
+                <span class="section-label">Layanan Kami</span>
+                <h2 class="section-title">Layanan Hukum Komprehensif</h2>
+                <p class="section-subtitle">Kami menyediakan berbagai layanan hukum untuk melindungi hak dan kepentingan Anda di berbagai bidang hukum.</p>
+                <div class="gold-line"></div>
+            </div>
+            <div class="services-grid">
+                <!-- Hukum Pidana -->
+                <div class="service-card fade-up">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"/>
+                            <line x1="12" y1="8" x2="12" y2="12"/>
+                            <line x1="12" y1="16" x2="12.01" y2="16"/>
+                        </svg>
+                    </div>
+                    <h3>Hukum Pidana</h3>
+                    <p class="service-en">Criminal Law</p>
+                    <p>Pendampingan dan perlindungan hukum dalam kasus pidana, mulai dari penyelidikan hingga persidangan, termasuk pembelaan tersangka dan terdakwa.</p>
+                </div>
+
+                <!-- Hukum Perdata -->
+                <div class="service-card fade-up">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                            <line x1="16" y1="17" x2="8" y2="17"/>
+                        </svg>
+                    </div>
+                    <h3>Hukum Perdata</h3>
+                    <p class="service-en">Civil Law</p>
+                    <p>Penyelesaian sengketa perdata termasuk gugatan perdata, wanprestasi, perbuatan melawan hukum, dan berbagai klaim perdata lainnya.</p>
+                </div>
+
+                <!-- Hukum Keluarga -->
+                <div class="service-card fade-up">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <h3>Hukum Keluarga</h3>
+                    <p class="service-en">Family Law</p>
+                    <p>Penanganan kasus perceraian, hak asuh anak, harta bersama, nafkah, dan berbagai sengketa dalam lingkup hukum keluarga.</p>
+                </div>
+
+                <!-- Hukum Bisnis -->
+                <div class="service-card fade-up">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                        </svg>
+                    </div>
+                    <h3>Hukum Bisnis &amp; Korporasi</h3>
+                    <p class="service-en">Business &amp; Corporate Law</p>
+                    <p>Konsultasi hukum bisnis, pendirian PT dan CV, due diligence, kontrak komersial, dan permasalahan hukum korporasi lainnya.</p>
+                </div>
+
+                <!-- Hukum Agraria -->
+                <div class="service-card fade-up">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                    </div>
+                    <h3>Hukum Agraria &amp; Pertanahan</h3>
+                    <p class="service-en">Land &amp; Agrarian Law</p>
+                    <p>Penyelesaian sengketa tanah, sertifikasi, penguasaan hak atas tanah, dan berbagai permasalahan agraria lainnya.</p>
+                </div>
+
+                <!-- Sengketa & Mediasi -->
+                <div class="service-card fade-up">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                            <line x1="9" y1="9" x2="9.01" y2="9"/>
+                            <line x1="15" y1="9" x2="15.01" y2="9"/>
+                        </svg>
+                    </div>
+                    <h3>Sengketa &amp; Mediasi</h3>
+                    <p class="service-en">Dispute &amp; Mediation</p>
+                    <p>Penyelesaian sengketa melalui jalur mediasi dan negosiasi untuk mencapai solusi yang saling menguntungkan tanpa proses pengadilan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         WHY CHOOSE US
+         ========================================== -->
+    <section class="why" id="mengapa">
+        <div class="container">
+            <div class="section-header fade-up">
+                <span class="section-label">Mengapa Kami</span>
+                <h2 class="section-title">Komitmen Kami pada Anda</h2>
+                <p class="section-subtitle">Alasan klien mempercayakan urusan hukum mereka kepada ALC Law Office.</p>
+                <div class="gold-line"></div>
+            </div>
+            <div class="why-grid">
+                <!-- Pengalaman -->
+                <div class="why-item fade-up">
+                    <div class="why-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                    </div>
+                    <h3>Berpengalaman</h3>
+                    <p>Didukung oleh pengalaman praktik hukum yang solid dalam berbagai bidang hukum dengan pendekatan yang strategis.</p>
+                </div>
+
+                <!-- Komitmen -->
+                <div class="why-item fade-up">
+                    <div class="why-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <h3>Komitmen Tinggi</h3>
+                    <p>Setiap kasus ditangani dengan dedikasi penuh dan menjaga kerahasiaan klien sebagai prinsip utama praktik hukum kami.</p>
+                </div>
+
+                <!-- Responsif -->
+                <div class="why-item fade-up">
+                    <div class="why-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                        </svg>
+                    </div>
+                    <h3>Responsif</h3>
+                    <p>Respons cepat dan komunikasi yang baik. Kami selalu siap menjawab pertanyaan dan memberikan update perkembangan kasus Anda.</p>
+                </div>
+
+                <!-- Terpercaya -->
+                <div class="why-item fade-up">
+                    <div class="why-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                    </div>
+                    <h3>Terpercaya</h3>
+                    <p>Dipercaya oleh klien dengan rating sempurna 5.0 di Google Maps. Kepuasan klien adalah bukti nyata kualitas layanan kami.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         TESTIMONIAL / TRUST
+         ========================================== -->
+    <section class="trust">
+        <div class="container">
+            <div class="trust-card fade-up">
+                <div class="trust-stars">
+                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <div class="trust-score">5.0</div>
+                <p class="trust-label">Rating di Google Maps</p>
+                <a href="https://maps.app.goo.gl/bViyi2uyTSgjV8sY7" target="_blank" rel="noopener" class="trust-link">
+                    Lihat Ulasan di Google Maps
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+                <p class="trust-quote">
+                    "Pelayanan yang profesional dan responsif. Sangat membantu dalam menyelesaikan permasalahan hukum saya."
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         KONTAK (CONTACT)
+         ========================================== -->
+    <section class="contact" id="kontak">
+        <div class="container">
+            <div class="section-header fade-up">
+                <span class="section-label">Hubungi Kami</span>
+                <h2 class="section-title">Konsultasi Hukum</h2>
+                <p class="section-subtitle">Jangan ragu untuk menghubungi kami. Kami siap membantu menyelesaikan permasalahan hukum Anda.</p>
+                <div class="gold-line"></div>
+            </div>
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-area fade-up">
+                    <h3>Kirim Pesan</h3>
+                    <p>Isi formulir di bawah ini dan kami akan merespons segera.</p>
+                    <form id="contactForm" onsubmit="return false;">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Nama Lengkap</label>
+                                <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">No. Telepon</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Masukkan nomor telepon">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Pesan</label>
+                            <textarea id="message" name="message" placeholder="Deskripsikan permasalahan hukum Anda..." required></textarea>
+                        </div>
+                        <button type="submit" class="form-submit">
+                            Kirim Pesan
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info-area fade-up">
+                    <h3>Informasi Kantor</h3>
+
+                    <div class="contact-detail">
+                        <div class="contact-detail-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
+                        <div class="contact-detail-text">
+                            <strong>Alamat</strong>
+                            <span>Jl. P. Tirtayasa No.12, Sukabumi, Kec. Sukabumi, Kota Bandar Lampung, Lampung 35134</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-detail">
+                        <div class="contact-detail-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        </div>
+                        <div class="contact-detail-text">
+                            <strong>Telepon</strong>
+                            <a href="tel:+6287883032862">0878-8303-2862</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-detail">
+                        <div class="contact-detail-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </div>
+                        <div class="contact-detail-text">
+                            <strong>Email</strong>
+                            <a href="mailto:alclawoffice1@gmail.com">alclawoffice1@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-detail">
+                        <div class="contact-detail-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </div>
+                        <div class="contact-detail-text">
+                            <strong>Jam Operasional</strong>
+                            <span>Senin - Sabtu<br>10.00 - 17.00 WIB</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.1!2d105.2!3d-5.4!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e40e0b123456789%3A0xabcdef!2sJl.+P.+Tirtayasa+No.12!5e0!3m2!1sid!2sid!4v1234567890" width="100%" height="240" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Lokasi Kantor Hukum ALC"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         FOOTER
+         ========================================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand -->
+                <div class="footer-brand">
+                    <a href="#beranda" class="nav-logo">
+                        <div class="nav-logo-icon">ALC</div>
+                        <div class="nav-logo-text">
+                            ALC Law Office
+                            <span>Aldo Chanigia & Partners</span>
+                        </div>
+                    </a>
+                    <p>Kantor hukum terpercaya yang berkomitmen memberikan solusi hukum terbaik untuk masyarakat Bandar Lampung dan sekitarnya.</p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/alc.lawoffice" target="_blank" rel="noopener" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+                        </a>
+                        <a href="https://www.tiktok.com/@adv.aldochanigia" target="_blank" rel="noopener" aria-label="TikTok">
+                            <svg viewBox="0 0 24 24"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                        <a href="https://wa.me/6287883032862" target="_blank" rel="noopener" aria-label="WhatsApp">
+                            <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+                        </a>
+                        <a href="mailto:alclawoffice1@gmail.com" aria-label="Email">
+                            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" fill="none" stroke="currentColor" stroke-width="1.5"/><polyline points="22,6 12,13 2,6" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-col">
+                    <h4>Tautan</h4>
+                    <ul>
+                        <li><a href="#beranda">Beranda</a></li>
+                        <li><a href="#tentang">Tentang Kami</a></li>
+                        <li><a href="#layanan">Layanan</a></li>
+                        <li><a href="#kontak">Kontak</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div class="footer-col">
+                    <h4>Layanan</h4>
+                    <ul>
+                        <li><a href="#layanan">Hukum Pidana</a></li>
+                        <li><a href="#layanan">Hukum Perdata</a></li>
+                        <li><a href="#layanan">Hukum Keluarga</a></li>
+                        <li><a href="#layanan">Hukum Bisnis</a></li>
+                        <li><a href="#layanan">Hukum Agraria</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Kantor Hukum ALC Aldo Chanigia &amp; Partners. Hak cipta dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==========================================
+         FLOATING WHATSAPP BUTTON
+         ========================================== -->
+    <a href="https://wa.me/6287883032862?text=Halo%2C%20saya%20ingin%20konsultasi%20hukum" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat WhatsApp">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+
+    <!-- ==========================================
+         JAVASCRIPT
+         ========================================== -->
+    <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll > 60) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+            lastScroll = currentScroll;
+        }, { passive: true });
+
+        // Mobile menu
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileClose = document.getElementById('mobileClose');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.add('open');
+            hamburger.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        function closeMobileMenu() {
+            mobileMenu.classList.remove('open');
+            hamburger.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        mobileClose.addEventListener('click', closeMobileMenu);
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px 0px -60px 0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    // Stagger animation
+                    const delay = entry.target.dataset.delay || (index * 80);
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                    }, delay);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-up elements
+        document.querySelectorAll('.fade-up').forEach((el, i) => {
+            el.dataset.delay = (i % 4) * 100;
+            observer.observe(el);
+        });
+
+        // Smooth scroll for anchor links (fallback for older browsers)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const navHeight = navbar.offsetHeight;
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Contact form (decorative - just shows confirmation)
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('.form-submit');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = 'Terkirim! Terima kasih.';
+            btn.style.background = '#25D366';
+            btn.style.borderColor = '#25D366';
+            btn.style.color = '#fff';
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.style.background = '';
+                btn.style.borderColor = '';
+                btn.style.color = '';
+                this.reset();
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
