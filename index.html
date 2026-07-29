@@ -33,7 +33,14 @@
     <meta name="twitter:title" content="Kantor Hukum ALC — Aldo Chanigia & Partners | Pengacara Bandar Lampung">
     <meta name="twitter:description" content="Kantor hukum terpercaya di Bandar Lampung. Layanan: Hukum Pidana, Perdata, Keluarga, Bisnis, Agraria, dan Mediasi. Konsultasi hukum via WhatsApp.">
 
+        <!-- Local SEO Geo Tags -->
+    <meta name="geo.region" content="ID-LA">
+    <meta name="geo.placename" content="Bandar Lampung">
+    <meta name="geo.position" content="-5.3829;105.2583">
+    <meta name="ICBM" content="-5.3829, 105.2583">
+
     <!-- Canonical URL -->
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
     <link rel="canonical" href="https://alcoffice.vercel.app/">
 
     <!-- Structured Data / JSON-LD -->
@@ -41,6 +48,8 @@
     {
         "@context": "https://schema.org",
         "@type": "LegalService",
+                "additionalType": "https://schema.org/Attorney",
+                "areaServed": {"@type": "City", "name": "Bandar Lampung", "containedInPlace": {"@type": "State", "name": "Lampung, Indonesia"}},
         "name": "Kantor Hukum ALC Aldo Chanigia & Partners",
         "alternateName": "ALC Law Office",
         "description": "Kantor hukum terpercaya di Bandar Lampung yang menyediakan layanan hukum komprehensif meliputi hukum pidana, perdata, keluarga, bisnis, agraria, dan mediasi.",
